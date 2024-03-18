@@ -1,0 +1,26 @@
+{% extends 'Doctor/Doctorpage.html' %}
+{% block content %}
+
+<div class="container-fluid py-5">
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>PatientName</th><th>Request</th><th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for d in data %}
+
+                
+                <tr>
+<td>{{d.usr.name}}</td><td>{{d.request}}</td><td><a href="/Viewimage?email={{d.usr.email}}">View Image</a></td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+            
+        </table>
+        </div>
+        </div>
+{% endblock %}

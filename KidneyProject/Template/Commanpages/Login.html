@@ -1,0 +1,26 @@
+{% extends 'Commanpages/Commanpage.html' %}
+{% block content %}
+<div class="col-xl-6 col-lg-6 wow slideInUp" data-wow-delay="0.3s">
+    {% if msg %}
+    <script>
+        alert('{{msg}}')
+    </script>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        <div class="row g-3">
+            <div class="col-12">
+                <input type="text" class="form-control border-0 bg-light px-4" name="Username" placeholder="Username" style="height: 55px;">
+            </div>
+            <div class="col-12">
+                <input type="password" class="form-control border-0 bg-light px-4" name="Password" placeholder="Password" style="height: 55px;">
+            </div>
+           
+            <div class="col-12">
+                <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
+                <br>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

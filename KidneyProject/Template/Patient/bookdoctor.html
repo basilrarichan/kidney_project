@@ -1,0 +1,33 @@
+{% extends 'Patient/Patientpage.html' %}
+{% block content %}
+<div class="col-xl-6 col-lg-6 wow slideInUp" data-wow-delay="0.3s">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row g-3">
+            <div class="col-12">
+                <input type="Text" class="form-control border-0 bg-light px-4" required placeholder="Request" name="request" style="height: 55px;">
+            </div>
+            <div class="col-12">
+                <input type="date" class="form-control border-0 bg-light px-4" required placeholder="bookingdate" name="bookingdate" style="height: 55px;">
+            </div>
+              
+            <div class="col-12">
+                <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
+                <br>
+            </div>
+            <div class="col-12">
+               <h1></h1>
+            </div>
+            
+            <div class="col-12">
+                <h1></h1>
+             </div>
+             <div class="col-12">
+                <h1></h1>
+             </div> 
+
+             
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'Patient/Patientpage.html' %}
+{% block content %}
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row g-5">
+            {% for d in data %}
+            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                <div class="team-item">
+                    <div class="position-relative rounded-top" style="z-index: 1;">
+                        <img class="img-fluid rounded-top w-100" src="/static/media/{{d.img}}" alt="">
+                      
+                    </div>
+                    <div class="team-text position-relative bg-light text-center rounded-bottom p-4 pt-5">
+                        <h4 class="mb-2">{{d.name}}</h4>
+                        <p class="text-primary mb-0">{{d.desig}}</p>
+                        <p class="text-primary mb-0">{{d.address}}</p>
+                        <p class="text-primary mb-0">{{d.phone}}</p>
+                        <a class="btn btn-primary btn-square" style="width:100px;" href="/bookdoctor?id={{d.id}}" >Book</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            
+            
+            
+            
+        </div>
+    </div>
+</div>
+{% endblock %}
